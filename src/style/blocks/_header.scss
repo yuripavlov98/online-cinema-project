@@ -1,0 +1,86 @@
+.header {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px
+    }
+    &__logo {
+        font-family: Raleway, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 29px;
+        text-transform: uppercase;
+        max-width: 106px;
+    }
+    &__logo-primary {
+        color: var(--color-primary);
+    }
+    &__search-form {
+        flex-grow: 1;
+        height: 70px;
+        padding-left: 60px;
+        background-image: url("../img/search.svg");
+        background-repeat: no-repeat;
+        background-position: left 15px center;
+        background-color: var(--color-second);
+        border-radius: 6px;
+        overflow: hidden;
+    }
+    &__search-input {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 24px;
+        color: var(--color-text);
+        padding-left: 13px;
+        &:focus {
+            background-color: var(--color-primary);
+        }
+    }
+    &__burger-btn {
+        width: 106px;
+        height: 40px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        transition: box-shadow .2s;
+        &:focus {
+            box-shadow: 0 0 3px 2px var(--color-primary);
+        }
+        &:active {
+            box-shadow: 0 0 3px 2px var(--color-primary);
+        }
+        &:hover .header__burger-svg {
+            stroke: var(--color-primary);
+        }
+        &:active .header__burger-svg {
+            stroke: var(--color-primary);
+        }
+    }
+    &__burger-svg {
+        stroke: var(--color-text);
+        transition: stroke .2s;
+    }
+}
+@media (max-width: 768px) {
+    .header {
+        &__burger-btn {
+            padding: 0;
+            width: auto;
+        }
+        &__container {
+            flex-wrap: wrap;
+        }
+        &__search-form {
+            width: 100%;
+            order: 1;
+            height: 50px;
+            padding-left: 50px;
+            background-position: left 10px center;
+        }
+    }
+}

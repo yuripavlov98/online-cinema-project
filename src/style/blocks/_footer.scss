@@ -1,0 +1,98 @@
+.footer {
+    padding: 60px 0;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 60px 30px;
+    }
+    &__column {
+        width: calc(25% - 30px);
+    }
+}
+.contacts {
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &__logo {
+        font-family: Raleway, sans-serif;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 29px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    &__logo-primary {
+        color: var(--color-primary);
+    }
+    &__description {
+        font-size: 18px;
+        line-height: 140%;
+        opacity: 0.6;
+        margin-bottom: 26px;
+    }
+    &__phone {
+        display: block;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 140%;
+        margin-bottom: 10px; 
+    }
+    &__mail {
+        display: block;
+        font-size: 18px;
+        line-height: 140%;
+        opacity: 0.6;
+        margin-bottom: 5px;
+    }
+}
+.subnav {
+    &__link {
+        font-size: 18px;
+        line-height: 140%;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}
+.regulation {
+    &__age {
+        height: 45px;
+        margin-bottom: 20px;
+    }
+    &__offer {
+        max-width: 310px;
+        font-size: 16px;
+        line-height: 140%;
+        opacity: 0.6;
+    }
+}
+.partners {
+    &__me {
+        height: 45px;
+        margin-bottom: 20px
+    }
+    &__description {
+        max-width: 310px;
+        font-size: 16px;
+        line-height: 140%;
+        opacity: 0.6;
+    }
+}
+
+@media (max-width: 1000px) {
+    .footer {
+        &__column {
+            width: calc(50% - 30px);
+        }
+    }
+}
+@media (max-width: 480px) {
+    .footer {
+        &__column {
+            width: 100%;
+        }
+    }
+}
